@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>App</span>
+</mat-toolbar>
+<!--<mat-drawer-container class="parent" [hasBackdrop]="true">-->
+<!--  <mat-drawer #drawer mode="side" class="sidebar">-->
+<!--    <mat-list role="list">-->
+<!--      <mat-list-item role="listitem" routerLink="/Principal">-->
+<!--        <mat-icon>home</mat-icon>-->
+<!--        <span class="menu-item">Inicio</span></mat-list-item>-->
+<!--      <mat-list-item role="listitem" routerLink="/Juegos">-->
+<!--        <mat-icon>casino</mat-icon>-->
+<!--        <span class="menu-item">Juegos</span></mat-list-item>-->
+<!--    </mat-list>-->
+<!--      <div class="example-sidenav-content">-->
+<!--        <button type="button" mat-button (click)="drawer.toggle()">-->
+<!--          Toggle sidenav-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    <p>Auto-resizing sidenav</p>-->
+<!--  </mat-drawer>-->
+<!--  <router-outlet></router-outlet>-->
+<!--</mat-drawer-container>-->
+<mat-drawer-container class="parent" autosize>
+  <mat-drawer #drawer class="sidebar" mode="side">
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        <span class="menu-item">Inicio</span></mat-list-item>
+      <mat-list-item role="listitem" routerLink="/Juegos">
+        <mat-icon>casino</mat-icon>
+        <span class="menu-item">Juegos</span></mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+
+</mat-drawer-container>
