@@ -1,1 +1,74 @@
-<p>home works!</p>
+<div class="container" fxLayout="column wrap" fxLayoutGap="10px" fxLayoutAlign="center center">
+  <div fxFlex="100%" class="item item-1" fxFlex.xs="55">
+    <h1>Region: {{region}}</h1>
+  </div>
+  <div fxFlex="100%" fxFlexAlign="center">
+    <div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around center">
+        <button class="button-margin" fxFlex="0 1 calc(25% - 10px)" mat-raised-button color="primary">Region Europa</button>
+
+        <button class="button-margin" fxFlex="0 1 calc(25% - 10px)" mat-raised-button color="accent">Region Asia</button>
+
+        <button class="button-margin" fxFlex="0 1 calc(25% - 10px)" mat-raised-button>Region America</button>
+
+        <button class="button-margin" fxFlex="0 1 calc(25% - 10px)" mat-raised-button>Region Africa</button>
+
+
+    </div>
+
+  </div>
+
+</div>
+<mat-divider></mat-divider>
+
+
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutGap.xs="0px" fxLayoutAlign="flex-start">
+  <ng-container *ngIf="loading" fxFlexAlign="center">
+      <div fxFlex="100%" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+      </div>
+  </ng-container>
+<!--  <div fxFlex="100%" *ngIf="loading">-->
+<!--    <mat-spinner></mat-spinner>-->
+<!--  </div>-->
+<!--  <div *ngIf="!loading">-->
+    <!--    <div *ngFor="let country of countries">-->
+    <!--      <div fxFlex="33%" fxFlex.xs="100%">-->
+    <!--        <mat-card>-->
+    <!--          <mat-card-header>-->
+    <!--            <mat-card-title>{{"de Mierda"}}</mat-card-title>-->
+    <!--          </mat-card-header>-->
+
+    <!--        </mat-card>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--    <div fxFlex="33%" fxFlex.xs="100%">-->
+    <ng-container  *ngFor="let country of countries">
+      <mat-card class="mat-card-grid" fxFlex="0 1 calc(33.3% - 32px)" fxFlexAlign="center" fxFlex.xs="0 1 100%">
+        <mat-card-header>
+          <mat-card-title>{{country.name}}</mat-card-title>
+        </mat-card-header>
+
+      </mat-card>
+    </ng-container>
+
+    <!--    </div>-->
+    <!--    <div fxFlex="33%" fxFlex.xs="100%">-->
+    <!--      <mat-card>-->
+    <!--        <mat-card-header>-->
+    <!--          <mat-card-title>{{"trola"}}</mat-card-title>-->
+    <!--        </mat-card-header>-->
+
+    <!--      </mat-card>-->
+<!--  </div>-->
+  <!--    <div fxFlex="33%" fxFlex.xs="100%">-->
+  <!--      <mat-card>-->
+  <!--        <mat-card-header>-->
+  <!--          <mat-card-title>{{"trola"}}</mat-card-title>-->
+  <!--        </mat-card-header>-->
+
+  <!--      </mat-card>-->
+  <!--    </div>-->
+
+
+</div>
